@@ -4,6 +4,8 @@ sphinx-theme-rux
 Demo
 ----
 
+https://curdpy.readthedocs.org/en/latest/
+
 How to use
 -----------
 
