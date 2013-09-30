@@ -11,7 +11,7 @@
  * Page Layout
  */
 body
-  font: 16px/1.48 'Georgia', 'goudy old style', 'minion pro', 'bell mt', 'Hiragino Mincho Pro', serif
+  font: 17px/1.48 Georgia, 'goudy old style', 'minion pro', 'bell mt', 'Hiragino Mincho Pro', serif
   background-color: white
   font-weight: normal
   color: #000
@@ -42,11 +42,15 @@ div.body h1.project-name
 //nav
 div.body .nav
   text-align: center
-  +ofl-font(21px)
+  +ofl-font(20px)
   font-weight: 300
   color: $red
   a
     margin: 0 8px
+    text-decoration: none
+    border-bottom: 1px dotted #bb0000
+  a:hover
+    border-bottom: 1px solid #bb0000
 
 div.body
   background-color: #fff
@@ -92,6 +96,7 @@ div.related
   a
     color: #444
 
+
 /*
  * Body style
  */
@@ -110,4 +115,22 @@ a:hover
 a:visited
   color: $red
 
+a.reference
+  border-bottom: 1px dotted #bb0000
+
+a.reference:hover
+  text-decoration: none
+  border-bottom: 1px solid #bb0000
+
+div.topic
+  background: #eee
+
 @import markdown
+
+.cut
+  font-size: 21px
+  clear: both
+  color: #aaa
+  text-align: center
+  letter-spacing: 5px
+  margin: 15px 0
