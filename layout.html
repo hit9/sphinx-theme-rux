@@ -1,0 +1,69 @@
+{% extends "basic/layout.html" %}
+
+{% block header %}
+  {{ super() }}
+  {% if pagename == 'index' %}
+  <div class=indexwrapper>
+  {% endif %}
+{% endblock %}
+
+{%- block document %}
+  <div class="documentwrapper">
+    {%- if render_sidebar %}
+      <div class="bodywrapper">
+    {%- endif %}
+        <div class="body">
+          <h1 class="project-name">
+            <a href="index.html">{{project}}</a>
+          </h1>
+          <div class="nav separator">
+          <span>
+            <a href="index.html">Index</a>&nbsp;
+            {%- if hasdoc('quickstart') %}
+            ~ <a href="quickstart.html">Quick Start</a>&nbsp;
+            {%- endif -%}
+            ~ <a href="https://github.com/{{theme_github}}/{{project}}">Code</a>&nbsp;
+            ~ <a href="https://github.com/{{theme_github}}/{{project}}/issues">Issues</a>&nbsp;
+            {%- if hasdoc('about') %}
+            ~ <a href="/about.html">About</a>&nbsp;
+            {%- endif -%}
+          </span>
+          </div>
+          <p class="flourish"><img src="{{pathto('_static',1)}}/flourish.svg" height="60px" alt=""></p>
+          <div class="body-html">
+            {% block body %}
+            {% endblock %}
+          </div>
+       </div>
+   {%- if render_sidebar %}
+     </div>
+   {%- endif %}
+  </div>
+{%- endblock %}
+
+{% block footer %}
+  {% if pagename == 'index' %}
+  </div>
+  {% endif %}
+  <div class="footer">
+    &copy; Copyright {{ copyright }}.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>. Theme
+    <a href="https://github.com/hit9/sphinx-theme-rux">rux</a>.
+  </div>
+{% endblock %}
+
+{# do not display relbars #}
+{% block relbar1 %}{% endblock %}
+
+{% block relbar2 %}
+  {% if theme_github %}
+  <a href="http://github.com/{{ theme_github }}/{{project}}">
+    <img style="position: fixed; top: 0; right: 0; border: 0;"
+    src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+    alt="Fork me on GitHub" />
+  </a>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}

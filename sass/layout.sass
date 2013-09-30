@@ -1,0 +1,113 @@
+@import base
+@import normalize
+
+@import url("basic.css")
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300)
+@import url(http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic)
+
+/*
+ * Page Layout
+ */
+body
+  font: 16px/1.48 'Georgia', 'goudy old style', 'minion pro', 'bell mt', 'Hiragino Mincho Pro', serif
+  background-color: white
+  font-weight: normal
+  color: #000
+  margin: 0
+  padding: 0
+
+div.documentwrapper
+  float: left
+  width: 100%
+
+div.bodywrapper
+  margin: 40px auto 0 auto
+  width: $width
+
+hr
+  border: 1px solid  #B1B4B6  // #B1B4B6: on kind of gray
+
+
+// Project Name
+div.body h1.project-name
+  text-align: center
+  +ofl-font(53px)
+  font-weight: 300
+  a
+    text-decoration: none
+
+
+//nav
+div.body .nav
+  text-align: center
+  +ofl-font(21px)
+  font-weight: 300
+  color: $red
+  a
+    margin: 0 8px
+
+div.body
+  background-color: #fff
+  padding: 0 30px 30px 30px
+
+.separator
+  width: 100%
+  border-bottom: 1px dotted $red
+  text-align: center
+  height: 18px
+  margin-bottom: 15px
+
+.separator span
+  line-height: 20px
+  padding: 0 20px
+  background: white
+  display: inline-block
+  margin-top: 10px
+
+//flourish
+.flourish
+  text-align: center
+  margin: 60px 0
+
+//footer
+div.footer
+  text-align: right
+  color: #888
+  padding: 10px
+  font-size: 14px
+  width: 650px
+  margin: 0 auto 40px auto
+  a
+    color: #888
+    text-decoration: underline
+
+
+div.related 
+  line-height: 32px
+  color: #888
+  ul
+    padding: 0 0 0 10px
+  a
+    color: #444
+
+/*
+ * Body style
+ */
+
+a
+  text-decoration: none
+
+a:link
+  color: $red
+  text-decoration: none
+
+a:hover
+  color: $red
+  text-decoration: underline
+
+a:visited
+  color: $red
+
+@import markdown
