@@ -19,3 +19,5 @@ sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
 html_theme = 'rux'
 ```
+
+Edit options in `theme.conf`.
