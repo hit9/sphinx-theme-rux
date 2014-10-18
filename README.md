@@ -4,7 +4,7 @@ sphinx-theme-rux
 Demo
 ----
 
-http://curdpy.readthedocs.org
+http://skylark.readthedocs.org
 
 How to use
 -----------
