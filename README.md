@@ -4,7 +4,8 @@ sphinx-theme-rux
 Demo
 ----
 
-http://skylark.readthedocs.org
+http://pyzh.readthedocs.org
+
 
 How to use
 -----------
